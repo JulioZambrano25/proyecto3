@@ -13,7 +13,7 @@ function HomePage() {
   return (
     <Container>
       <Paragraph>Ofrecemos cursos en inglés, francés y portugués.</Paragraph>
-      <Paragraph>"Descubre una nueva forma de aprender con nuestra plataforma de cursos en línea. 
+      <Paragraph>Descubre una nueva forma de aprender con nuestra plataforma de cursos en línea. 
         Ofrecemos una amplia variedad de cursos en inglés, francés y portugués diseñados para adaptarse a tu ritmo y
         horario. Desde principiantes hasta niveles avanzados, nuestros cursos están creados por expertos en el idioma y 
         cubren temas prácticos y relevantes. Con funcionalidades mejoradas como componentes estilizados y 
