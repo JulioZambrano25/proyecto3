@@ -87,9 +87,9 @@ function CoursesPage() {
   };
 
   const courses = [
-    { name: 'Inglés', image: '/images/english.jpg' },
-    { name: 'Francés', image: '/images/french.jpg' },
-    { name: 'Portugués', image: '/images/portuguese.jpg' },
+    { name: 'Inglés', image: '/images/english.jpeg' },
+    { name: 'Francés', image: '/images/french.jpeg' },
+    { name: 'Portugués', image: '/images/portuguese.jpeg' },
   ];
 
   return (

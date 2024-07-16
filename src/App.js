@@ -1,26 +1,38 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import SignupPage from './pages/SignupPage';
-import LoginPage from './pages/LoginPage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import Navbar from './components/Navbar'; 
+import SignupPage from './pages/SignupPage'; 
+import LoginPage from './pages/LoginPage'; 
 import CoursesPage from './pages/CoursesPage';
+import HomePage from './pages/HomePage';
 
-function App() {
-  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentUser')));
+const Container = styled.div`
+  text-align: center;
+  padding: 2rem;
+`;
 
-  const handleLogin = (user) => {
-    setCurrentUser(user);
-  };
+const Title = styled.h1`
+  color: #282c34;
+`;
 
+const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to={currentUser ? '/courses' : '/login'} />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-        <Route path="/courses" element={currentUser ? <CoursesPage /> : <Navigate to="/login" />} />
-      </Routes>
+      <div>
+        <Navbar />
+        <Container>
+          <Title>Bienvenido a tu aplicación de cursos en línea</Title>
+          <Routes>
+            <Route path="/src/pages/HomePage.js" element={<HomePage />} />
+            <Route path="/src/pages/CoursesPage.js" element={<CoursesPage />} />
+            <Route path="/src/pages/SignupPage.js" element={<SignupPage />} />
+            <Route path="/src/pages/LoginPage.js" element={<LoginPage />} />
+          </Routes>
+        </Container>
+      </div>
     </Router>
   );
-}
+};
 
 export default App;
