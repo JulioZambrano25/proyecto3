@@ -24,6 +24,7 @@ const App = () => {
         <Container>
           <Title>Bienvenido a tu aplicación de cursos en línea</Title>
           <Routes>
+            <Route path="/" element={<SignupPage />} />
             <Route path="/src/pages/HomePage.js" element={<HomePage />} />
             <Route path="/src/pages/CoursesPage.js" element={<CoursesPage />} />
             <Route path="/src/pages/SignupPage.js" element={<SignupPage />} />

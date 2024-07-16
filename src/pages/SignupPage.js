@@ -58,6 +58,8 @@ function SignupPage() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
 
+
+  //Para que el formulario no quede vacio
   const validate = () => {
     const errors = {};
 
